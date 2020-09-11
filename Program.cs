@@ -23,31 +23,41 @@ class Program
             builder.WithConventions();
         });
 
+        string runId = DateTime.UtcNow.ToString("yyyy-MM-dd-HHmmss");
+        string outputDir = Path.Combine(Path.GetTempPath(), "json_error_data");
+
         for (int i = 0; i < 1000; i++)
         {
+            var stream = new MemoryStream();
 
-            var customers = new CustomerCollectionResponse
+            try
             {
-                Customers = Enumerable.Range(0, 500).Select(i => CustomerDataGenerator.CreateCustomer()).ToList()
-            };
+                var customers = new CustomerCollectionResponse
+                {
+                    Customers = Enumerable.Range(0, 250).Select(i => CustomerDataGenerator.CreateCustomer()).ToList()
+                };
 
-            var buffer = new MemoryStream();
+                await JsonSerializer.SerializeAsync(stream, customers);
 
-            await JsonSerializer.SerializeAsync(buffer, customers);
+                stream.Position = 0;
 
-            //await buffer.FlushAsync();
-            buffer.Position = 0;
+                var deserialized = await JsonSerializer.DeserializeAsync<CustomerCollectionResponse>(stream, s_serializerOptions);
 
-            //var reader = new StreamReader(buffer);
-            //Console.WriteLine();
-            //Console.WriteLine(await reader.ReadToEndAsync());
+                Console.WriteLine($"{i:0000}: Reading Json from stream - deserialized {deserialized.Customers.Count} customer records.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"{i:0000}: Error:{Environment.NewLine}{e}");
 
-            //buffer.Position = 0;
-
-            var deserialized = await JsonSerializer.DeserializeAsync<CustomerCollectionResponse>(buffer, s_serializerOptions);
-
-            Console.WriteLine($"{i:0000}: Reading Json from stream - deserialized {deserialized.Customers.Count} customer records.");
-
+                if (!Directory.Exists(outputDir))
+                {
+                    Directory.CreateDirectory(outputDir);
+                }
+                using (var file = File.OpenWrite(Path.Combine(outputDir, $"{runId}-{i:0000}.json")))
+                {
+                    await file.WriteAsync(stream.ToArray());                    
+                }
+            }
         }
     }
 }

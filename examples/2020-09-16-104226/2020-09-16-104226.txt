@@ -1,0 +1,1736 @@
+0000: Reading Json from stream - deserialized 50 customer records.
+0001: Reading Json from stream - deserialized 50 customer records.
+0002: Reading Json from stream - deserialized 50 customer records.
+0003: Reading Json from stream - deserialized 50 customer records.
+0004: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[29].addresses[3].address2 | LineNumber: 0 | BytePositionInLine: 65664.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonConverter jsonConverter, Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0005: Reading Json from stream - deserialized 50 customer records.
+0006: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[37].default_address.address2 | LineNumber: 0 | BytePositionInLine: 82068.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0007: Reading Json from stream - deserialized 50 customer records.
+0008: Reading Json from stream - deserialized 50 customer records.
+0009: Reading Json from stream - deserialized 50 customer records.
+0010: Reading Json from stream - deserialized 50 customer records.
+0011: Reading Json from stream - deserialized 50 customer records.
+0012: Reading Json from stream - deserialized 50 customer records.
+0013: Reading Json from stream - deserialized 50 customer records.
+0014: Reading Json from stream - deserialized 50 customer records.
+0015: Reading Json from stream - deserialized 50 customer records.
+0016: Reading Json from stream - deserialized 50 customer records.
+0017: Reading Json from stream - deserialized 50 customer records.
+0018: Reading Json from stream - deserialized 50 customer records.
+0019: Reading Json from stream - deserialized 50 customer records.
+0020: Reading Json from stream - deserialized 50 customer records.
+0021: Reading Json from stream - deserialized 50 customer records.
+0022: Reading Json from stream - deserialized 50 customer records.
+0023: Reading Json from stream - deserialized 50 customer records.
+0024: Reading Json from stream - deserialized 50 customer records.
+0025: Reading Json from stream - deserialized 50 customer records.
+0026: Reading Json from stream - deserialized 50 customer records.
+0027: Reading Json from stream - deserialized 50 customer records.
+0028: Reading Json from stream - deserialized 50 customer records.
+0029: Reading Json from stream - deserialized 50 customer records.
+0030: Reading Json from stream - deserialized 50 customer records.
+0031: Reading Json from stream - deserialized 50 customer records.
+0032: Reading Json from stream - deserialized 50 customer records.
+0033: Reading Json from stream - deserialized 50 customer records.
+0034: Reading Json from stream - deserialized 50 customer records.
+0035: Reading Json from stream - deserialized 50 customer records.
+0036: Reading Json from stream - deserialized 50 customer records.
+0037: Reading Json from stream - deserialized 50 customer records.
+0038: Reading Json from stream - deserialized 50 customer records.
+0039: Reading Json from stream - deserialized 50 customer records.
+0040: Reading Json from stream - deserialized 50 customer records.
+0041: Reading Json from stream - deserialized 50 customer records.
+0042: Reading Json from stream - deserialized 50 customer records.
+0043: Reading Json from stream - deserialized 50 customer records.
+0044: Reading Json from stream - deserialized 50 customer records.
+0045: Reading Json from stream - deserialized 50 customer records.
+0046: Reading Json from stream - deserialized 50 customer records.
+0047: Reading Json from stream - deserialized 50 customer records.
+0048: Reading Json from stream - deserialized 50 customer records.
+0049: Reading Json from stream - deserialized 50 customer records.
+0050: Reading Json from stream - deserialized 50 customer records.
+0051: Reading Json from stream - deserialized 50 customer records.
+0052: Reading Json from stream - deserialized 50 customer records.
+0053: Reading Json from stream - deserialized 50 customer records.
+0054: Reading Json from stream - deserialized 50 customer records.
+0055: Reading Json from stream - deserialized 50 customer records.
+0056: Reading Json from stream - deserialized 50 customer records.
+0057: Reading Json from stream - deserialized 50 customer records.
+0058: Reading Json from stream - deserialized 50 customer records.
+0059: Reading Json from stream - deserialized 50 customer records.
+0060: Reading Json from stream - deserialized 50 customer records.
+0061: Reading Json from stream - deserialized 50 customer records.
+0062: Reading Json from stream - deserialized 50 customer records.
+0063: Reading Json from stream - deserialized 50 customer records.
+0064: Reading Json from stream - deserialized 50 customer records.
+0065: Reading Json from stream - deserialized 50 customer records.
+0066: Reading Json from stream - deserialized 50 customer records.
+0067: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[22].default_address.address2 | LineNumber: 0 | BytePositionInLine: 49283.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0068: Reading Json from stream - deserialized 50 customer records.
+0069: Reading Json from stream - deserialized 50 customer records.
+0070: Reading Json from stream - deserialized 50 customer records.
+0071: Reading Json from stream - deserialized 50 customer records.
+0072: Reading Json from stream - deserialized 50 customer records.
+0073: Reading Json from stream - deserialized 50 customer records.
+0074: Reading Json from stream - deserialized 50 customer records.
+0075: Reading Json from stream - deserialized 50 customer records.
+0076: Reading Json from stream - deserialized 50 customer records.
+0077: Reading Json from stream - deserialized 50 customer records.
+0078: Reading Json from stream - deserialized 50 customer records.
+0079: Reading Json from stream - deserialized 50 customer records.
+0080: Reading Json from stream - deserialized 50 customer records.
+0081: Reading Json from stream - deserialized 50 customer records.
+0082: Reading Json from stream - deserialized 50 customer records.
+0083: Reading Json from stream - deserialized 50 customer records.
+0084: Reading Json from stream - deserialized 50 customer records.
+0085: Reading Json from stream - deserialized 50 customer records.
+0086: Reading Json from stream - deserialized 50 customer records.
+0087: Reading Json from stream - deserialized 50 customer records.
+0088: Reading Json from stream - deserialized 50 customer records.
+0089: Reading Json from stream - deserialized 50 customer records.
+0090: Reading Json from stream - deserialized 50 customer records.
+0091: Reading Json from stream - deserialized 50 customer records.
+0092: Reading Json from stream - deserialized 50 customer records.
+0093: Reading Json from stream - deserialized 50 customer records.
+0094: Reading Json from stream - deserialized 50 customer records.
+0095: Reading Json from stream - deserialized 50 customer records.
+0096: Reading Json from stream - deserialized 50 customer records.
+0097: Reading Json from stream - deserialized 50 customer records.
+0098: Reading Json from stream - deserialized 50 customer records.
+0099: Reading Json from stream - deserialized 50 customer records.
+0100: Reading Json from stream - deserialized 50 customer records.
+0101: Reading Json from stream - deserialized 50 customer records.
+0102: Reading Json from stream - deserialized 50 customer records.
+0103: Reading Json from stream - deserialized 50 customer records.
+0104: Reading Json from stream - deserialized 50 customer records.
+0105: Reading Json from stream - deserialized 50 customer records.
+0106: Reading Json from stream - deserialized 50 customer records.
+0107: Reading Json from stream - deserialized 50 customer records.
+0108: Reading Json from stream - deserialized 50 customer records.
+0109: Reading Json from stream - deserialized 50 customer records.
+0110: Reading Json from stream - deserialized 50 customer records.
+0111: Reading Json from stream - deserialized 50 customer records.
+0112: Reading Json from stream - deserialized 50 customer records.
+0113: Reading Json from stream - deserialized 50 customer records.
+0114: Reading Json from stream - deserialized 50 customer records.
+0115: Reading Json from stream - deserialized 50 customer records.
+0116: Reading Json from stream - deserialized 50 customer records.
+0117: Reading Json from stream - deserialized 50 customer records.
+0118: Reading Json from stream - deserialized 50 customer records.
+0119: Reading Json from stream - deserialized 50 customer records.
+0120: Reading Json from stream - deserialized 50 customer records.
+0121: Reading Json from stream - deserialized 50 customer records.
+0122: Reading Json from stream - deserialized 50 customer records.
+0123: Reading Json from stream - deserialized 50 customer records.
+0124: Reading Json from stream - deserialized 50 customer records.
+0125: Reading Json from stream - deserialized 50 customer records.
+0126: Reading Json from stream - deserialized 50 customer records.
+0127: Reading Json from stream - deserialized 50 customer records.
+0128: Reading Json from stream - deserialized 50 customer records.
+0129: Reading Json from stream - deserialized 50 customer records.
+0130: Reading Json from stream - deserialized 50 customer records.
+0131: Reading Json from stream - deserialized 50 customer records.
+0132: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[37].default_address.province | LineNumber: 0 | BytePositionInLine: 82112.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0133: Reading Json from stream - deserialized 50 customer records.
+0134: Reading Json from stream - deserialized 50 customer records.
+0135: Reading Json from stream - deserialized 50 customer records.
+0136: Reading Json from stream - deserialized 50 customer records.
+0137: Reading Json from stream - deserialized 50 customer records.
+0138: Reading Json from stream - deserialized 50 customer records.
+0139: Reading Json from stream - deserialized 50 customer records.
+0140: Reading Json from stream - deserialized 50 customer records.
+0141: Reading Json from stream - deserialized 50 customer records.
+0142: Reading Json from stream - deserialized 50 customer records.
+0143: Reading Json from stream - deserialized 50 customer records.
+0144: Reading Json from stream - deserialized 50 customer records.
+0145: Reading Json from stream - deserialized 50 customer records.
+0146: Reading Json from stream - deserialized 50 customer records.
+0147: Reading Json from stream - deserialized 50 customer records.
+0148: Reading Json from stream - deserialized 50 customer records.
+0149: Reading Json from stream - deserialized 50 customer records.
+0150: Reading Json from stream - deserialized 50 customer records.
+0151: Reading Json from stream - deserialized 50 customer records.
+0152: Reading Json from stream - deserialized 50 customer records.
+0153: Reading Json from stream - deserialized 50 customer records.
+0154: Reading Json from stream - deserialized 50 customer records.
+0155: Reading Json from stream - deserialized 50 customer records.
+0156: Reading Json from stream - deserialized 50 customer records.
+0157: Reading Json from stream - deserialized 50 customer records.
+0158: Reading Json from stream - deserialized 50 customer records.
+0159: Reading Json from stream - deserialized 50 customer records.
+0160: Reading Json from stream - deserialized 50 customer records.
+0161: Reading Json from stream - deserialized 50 customer records.
+0162: Reading Json from stream - deserialized 50 customer records.
+0163: Reading Json from stream - deserialized 50 customer records.
+0164: Reading Json from stream - deserialized 50 customer records.
+0165: Reading Json from stream - deserialized 50 customer records.
+0166: Reading Json from stream - deserialized 50 customer records.
+0167: Reading Json from stream - deserialized 50 customer records.
+0168: Reading Json from stream - deserialized 50 customer records.
+0169: Reading Json from stream - deserialized 50 customer records.
+0170: Reading Json from stream - deserialized 50 customer records.
+0171: Reading Json from stream - deserialized 50 customer records.
+0172: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[14].addresses[3].address2 | LineNumber: 0 | BytePositionInLine: 32884.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0173: Reading Json from stream - deserialized 50 customer records.
+0174: Reading Json from stream - deserialized 50 customer records.
+0175: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[22].default_address.province | LineNumber: 0 | BytePositionInLine: 49348.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0176: Reading Json from stream - deserialized 50 customer records.
+0177: Reading Json from stream - deserialized 50 customer records.
+0178: Reading Json from stream - deserialized 50 customer records.
+0179: Reading Json from stream - deserialized 50 customer records.
+0180: Reading Json from stream - deserialized 50 customer records.
+0181: Reading Json from stream - deserialized 50 customer records.
+0182: Reading Json from stream - deserialized 50 customer records.
+0183: Reading Json from stream - deserialized 50 customer records.
+0184: Reading Json from stream - deserialized 50 customer records.
+0185: Reading Json from stream - deserialized 50 customer records.
+0186: Reading Json from stream - deserialized 50 customer records.
+0187: Reading Json from stream - deserialized 50 customer records.
+0188: Reading Json from stream - deserialized 50 customer records.
+0189: Reading Json from stream - deserialized 50 customer records.
+0190: Reading Json from stream - deserialized 50 customer records.
+0191: Reading Json from stream - deserialized 50 customer records.
+0192: Reading Json from stream - deserialized 50 customer records.
+0193: Reading Json from stream - deserialized 50 customer records.
+0194: Reading Json from stream - deserialized 50 customer records.
+0195: Reading Json from stream - deserialized 50 customer records.
+0196: Reading Json from stream - deserialized 50 customer records.
+0197: Reading Json from stream - deserialized 50 customer records.
+0198: Reading Json from stream - deserialized 50 customer records.
+0199: Reading Json from stream - deserialized 50 customer records.
+0200: Reading Json from stream - deserialized 50 customer records.
+0201: Reading Json from stream - deserialized 50 customer records.
+0202: Reading Json from stream - deserialized 50 customer records.
+0203: Reading Json from stream - deserialized 50 customer records.
+0204: Reading Json from stream - deserialized 50 customer records.
+0205: Reading Json from stream - deserialized 50 customer records.
+0206: Reading Json from stream - deserialized 50 customer records.
+0207: Reading Json from stream - deserialized 50 customer records.
+0208: Reading Json from stream - deserialized 50 customer records.
+0209: Reading Json from stream - deserialized 50 customer records.
+0210: Reading Json from stream - deserialized 50 customer records.
+0211: Reading Json from stream - deserialized 50 customer records.
+0212: Reading Json from stream - deserialized 50 customer records.
+0213: Reading Json from stream - deserialized 50 customer records.
+0214: Reading Json from stream - deserialized 50 customer records.
+0215: Reading Json from stream - deserialized 50 customer records.
+0216: Reading Json from stream - deserialized 50 customer records.
+0217: Reading Json from stream - deserialized 50 customer records.
+0218: Reading Json from stream - deserialized 50 customer records.
+0219: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[37].default_address.address2 | LineNumber: 0 | BytePositionInLine: 82051.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0220: Reading Json from stream - deserialized 50 customer records.
+0221: Reading Json from stream - deserialized 50 customer records.
+0222: Reading Json from stream - deserialized 50 customer records.
+0223: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[22].default_address.address2 | LineNumber: 0 | BytePositionInLine: 49280.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0224: Reading Json from stream - deserialized 50 customer records.
+0225: Reading Json from stream - deserialized 50 customer records.
+0226: Reading Json from stream - deserialized 50 customer records.
+0227: Reading Json from stream - deserialized 50 customer records.
+0228: Error:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 55
+0229: Reading Json from stream - deserialized 50 customer records.
+0230: Reading Json from stream - deserialized 50 customer records.
+0231: Reading Json from stream - deserialized 50 customer records.
+0232: Reading Json from stream - deserialized 50 customer records.
+0233: Reading Json from stream - deserialized 50 customer records.
+0234: Reading Json from stream - deserialized 50 customer records.
+0235: Reading Json from stream - deserialized 50 customer records.
+0236: Reading Json from stream - deserialized 50 customer records.
+0237: Reading Json from stream - deserialized 50 customer records.
+0238: Reading Json from stream - deserialized 50 customer records.
+0239: Reading Json from stream - deserialized 50 customer records.
+0240: Reading Json from stream - deserialized 50 customer records.
+0241: Reading Json from stream - deserialized 50 customer records.
+0242: Reading Json from stream - deserialized 50 customer records.
+0243: Reading Json from stream - deserialized 50 customer records.
+0244: Reading Json from stream - deserialized 50 customer records.
+0245: Reading Json from stream - deserialized 50 customer records.
+0246: Reading Json from stream - deserialized 50 customer records.
+0247: Reading Json from stream - deserialized 50 customer records.
+0248: Reading Json from stream - deserialized 50 customer records.
+0249: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[29].addresses[3].address2 | LineNumber: 0 | BytePositionInLine: 65663.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0250: Reading Json from stream - deserialized 50 customer records.
+0251: Reading Json from stream - deserialized 50 customer records.
+0252: Reading Json from stream - deserialized 50 customer records.
+0253: Reading Json from stream - deserialized 50 customer records.
+0254: Reading Json from stream - deserialized 50 customer records.
+0255: Reading Json from stream - deserialized 50 customer records.
+0256: Reading Json from stream - deserialized 50 customer records.
+0257: Reading Json from stream - deserialized 50 customer records.
+0258: Reading Json from stream - deserialized 50 customer records.
+0259: Reading Json from stream - deserialized 50 customer records.
+0260: Reading Json from stream - deserialized 50 customer records.
+0261: Reading Json from stream - deserialized 50 customer records.
+0262: Reading Json from stream - deserialized 50 customer records.
+0263: Reading Json from stream - deserialized 50 customer records.
+0264: Reading Json from stream - deserialized 50 customer records.
+0265: Reading Json from stream - deserialized 50 customer records.
+0266: Reading Json from stream - deserialized 50 customer records.
+0267: Reading Json from stream - deserialized 50 customer records.
+0268: Reading Json from stream - deserialized 50 customer records.
+0269: Reading Json from stream - deserialized 50 customer records.
+0270: Reading Json from stream - deserialized 50 customer records.
+0271: Reading Json from stream - deserialized 50 customer records.
+0272: Reading Json from stream - deserialized 50 customer records.
+0273: Reading Json from stream - deserialized 50 customer records.
+0274: Reading Json from stream - deserialized 50 customer records.
+0275: Reading Json from stream - deserialized 50 customer records.
+0276: Reading Json from stream - deserialized 50 customer records.
+0277: Reading Json from stream - deserialized 50 customer records.
+0278: Reading Json from stream - deserialized 50 customer records.
+0279: Reading Json from stream - deserialized 50 customer records.
+0280: Reading Json from stream - deserialized 50 customer records.
+0281: Reading Json from stream - deserialized 50 customer records.
+0282: Reading Json from stream - deserialized 50 customer records.
+0283: Reading Json from stream - deserialized 50 customer records.
+0284: Reading Json from stream - deserialized 50 customer records.
+0285: Reading Json from stream - deserialized 50 customer records.
+0286: Reading Json from stream - deserialized 50 customer records.
+0287: Reading Json from stream - deserialized 50 customer records.
+0288: Reading Json from stream - deserialized 50 customer records.
+0289: Reading Json from stream - deserialized 50 customer records.
+0290: Reading Json from stream - deserialized 50 customer records.
+0291: Reading Json from stream - deserialized 50 customer records.
+0292: Reading Json from stream - deserialized 50 customer records.
+0293: Reading Json from stream - deserialized 50 customer records.
+0294: Reading Json from stream - deserialized 50 customer records.
+0295: Reading Json from stream - deserialized 50 customer records.
+0296: Reading Json from stream - deserialized 50 customer records.
+0297: Reading Json from stream - deserialized 50 customer records.
+0298: Reading Json from stream - deserialized 50 customer records.
+0299: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[37].default_address.province | LineNumber: 0 | BytePositionInLine: 82131.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0300: Reading Json from stream - deserialized 50 customer records.
+0301: Reading Json from stream - deserialized 50 customer records.
+0302: Reading Json from stream - deserialized 50 customer records.
+0303: Reading Json from stream - deserialized 50 customer records.
+0304: Reading Json from stream - deserialized 50 customer records.
+0305: Reading Json from stream - deserialized 50 customer records.
+0306: Reading Json from stream - deserialized 50 customer records.
+0307: Reading Json from stream - deserialized 50 customer records.
+0308: Reading Json from stream - deserialized 50 customer records.
+0309: Reading Json from stream - deserialized 50 customer records.
+0310: Reading Json from stream - deserialized 50 customer records.
+0311: Reading Json from stream - deserialized 50 customer records.
+0312: Reading Json from stream - deserialized 50 customer records.
+0313: Reading Json from stream - deserialized 50 customer records.
+0314: Reading Json from stream - deserialized 50 customer records.
+0315: Reading Json from stream - deserialized 50 customer records.
+0316: Reading Json from stream - deserialized 50 customer records.
+0317: Reading Json from stream - deserialized 50 customer records.
+0318: Reading Json from stream - deserialized 50 customer records.
+0319: Reading Json from stream - deserialized 50 customer records.
+0320: Reading Json from stream - deserialized 50 customer records.
+0321: Reading Json from stream - deserialized 50 customer records.
+0322: Reading Json from stream - deserialized 50 customer records.
+0323: Reading Json from stream - deserialized 50 customer records.
+0324: Reading Json from stream - deserialized 50 customer records.
+0325: Reading Json from stream - deserialized 50 customer records.
+0326: Reading Json from stream - deserialized 50 customer records.
+0327: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[29].addresses[3].province | LineNumber: 0 | BytePositionInLine: 65728.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0328: Reading Json from stream - deserialized 50 customer records.
+0329: Reading Json from stream - deserialized 50 customer records.
+0330: Reading Json from stream - deserialized 50 customer records.
+0331: Reading Json from stream - deserialized 50 customer records.
+0332: Reading Json from stream - deserialized 50 customer records.
+0333: Reading Json from stream - deserialized 50 customer records.
+0334: Reading Json from stream - deserialized 50 customer records.
+0335: Reading Json from stream - deserialized 50 customer records.
+0336: Reading Json from stream - deserialized 50 customer records.
+0337: Reading Json from stream - deserialized 50 customer records.
+0338: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[29].addresses[3].province | LineNumber: 0 | BytePositionInLine: 65723.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0339: Reading Json from stream - deserialized 50 customer records.
+0340: Reading Json from stream - deserialized 50 customer records.
+0341: Reading Json from stream - deserialized 50 customer records.
+0342: Reading Json from stream - deserialized 50 customer records.
+0343: Reading Json from stream - deserialized 50 customer records.
+0344: Reading Json from stream - deserialized 50 customer records.
+0345: Reading Json from stream - deserialized 50 customer records.
+0346: Reading Json from stream - deserialized 50 customer records.
+0347: Reading Json from stream - deserialized 50 customer records.
+0348: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[22].default_address.address2 | LineNumber: 0 | BytePositionInLine: 49291.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0349: Reading Json from stream - deserialized 50 customer records.
+0350: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[14].addresses[3].province | LineNumber: 0 | BytePositionInLine: 32947.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0351: Reading Json from stream - deserialized 50 customer records.
+0352: Reading Json from stream - deserialized 50 customer records.
+0353: Reading Json from stream - deserialized 50 customer records.
+0354: Reading Json from stream - deserialized 50 customer records.
+0355: Reading Json from stream - deserialized 50 customer records.
+0356: Reading Json from stream - deserialized 50 customer records.
+0357: Reading Json from stream - deserialized 50 customer records.
+0358: Reading Json from stream - deserialized 50 customer records.
+0359: Reading Json from stream - deserialized 50 customer records.
+0360: Reading Json from stream - deserialized 50 customer records.
+0361: Reading Json from stream - deserialized 50 customer records.
+0362: Reading Json from stream - deserialized 50 customer records.
+0363: Reading Json from stream - deserialized 50 customer records.
+0364: Reading Json from stream - deserialized 50 customer records.
+0365: Reading Json from stream - deserialized 50 customer records.
+0366: Reading Json from stream - deserialized 50 customer records.
+0367: Reading Json from stream - deserialized 50 customer records.
+0368: Reading Json from stream - deserialized 50 customer records.
+0369: Reading Json from stream - deserialized 50 customer records.
+0370: Reading Json from stream - deserialized 50 customer records.
+0371: Reading Json from stream - deserialized 50 customer records.
+0372: Reading Json from stream - deserialized 50 customer records.
+0373: Reading Json from stream - deserialized 50 customer records.
+0374: Reading Json from stream - deserialized 50 customer records.
+0375: Reading Json from stream - deserialized 50 customer records.
+0376: Reading Json from stream - deserialized 50 customer records.
+0377: Reading Json from stream - deserialized 50 customer records.
+0378: Reading Json from stream - deserialized 50 customer records.
+0379: Reading Json from stream - deserialized 50 customer records.
+0380: Reading Json from stream - deserialized 50 customer records.
+0381: Reading Json from stream - deserialized 50 customer records.
+0382: Reading Json from stream - deserialized 50 customer records.
+0383: Reading Json from stream - deserialized 50 customer records.
+0384: Reading Json from stream - deserialized 50 customer records.
+0385: Reading Json from stream - deserialized 50 customer records.
+0386: Reading Json from stream - deserialized 50 customer records.
+0387: Reading Json from stream - deserialized 50 customer records.
+0388: Reading Json from stream - deserialized 50 customer records.
+0389: Reading Json from stream - deserialized 50 customer records.
+0390: Reading Json from stream - deserialized 50 customer records.
+0391: Reading Json from stream - deserialized 50 customer records.
+0392: Reading Json from stream - deserialized 50 customer records.
+0393: Reading Json from stream - deserialized 50 customer records.
+0394: Reading Json from stream - deserialized 50 customer records.
+0395: Reading Json from stream - deserialized 50 customer records.
+0396: Reading Json from stream - deserialized 50 customer records.
+0397: Reading Json from stream - deserialized 50 customer records.
+0398: Reading Json from stream - deserialized 50 customer records.
+0399: Reading Json from stream - deserialized 50 customer records.
+0400: Reading Json from stream - deserialized 50 customer records.
+0401: Reading Json from stream - deserialized 50 customer records.
+0402: Reading Json from stream - deserialized 50 customer records.
+0403: Reading Json from stream - deserialized 50 customer records.
+0404: Reading Json from stream - deserialized 50 customer records.
+0405: Reading Json from stream - deserialized 50 customer records.
+0406: Reading Json from stream - deserialized 50 customer records.
+0407: Reading Json from stream - deserialized 50 customer records.
+0408: Reading Json from stream - deserialized 50 customer records.
+0409: Reading Json from stream - deserialized 50 customer records.
+0410: Reading Json from stream - deserialized 50 customer records.
+0411: Reading Json from stream - deserialized 50 customer records.
+0412: Reading Json from stream - deserialized 50 customer records.
+0413: Reading Json from stream - deserialized 50 customer records.
+0414: Reading Json from stream - deserialized 50 customer records.
+0415: Reading Json from stream - deserialized 50 customer records.
+0416: Reading Json from stream - deserialized 50 customer records.
+0417: Reading Json from stream - deserialized 50 customer records.
+0418: Reading Json from stream - deserialized 50 customer records.
+0419: Reading Json from stream - deserialized 50 customer records.
+0420: Reading Json from stream - deserialized 50 customer records.
+0421: Reading Json from stream - deserialized 50 customer records.
+0422: Reading Json from stream - deserialized 50 customer records.
+0423: Reading Json from stream - deserialized 50 customer records.
+0424: Reading Json from stream - deserialized 50 customer records.
+0425: Reading Json from stream - deserialized 50 customer records.
+0426: Reading Json from stream - deserialized 50 customer records.
+0427: Reading Json from stream - deserialized 50 customer records.
+0428: Reading Json from stream - deserialized 50 customer records.
+0429: Reading Json from stream - deserialized 50 customer records.
+0430: Reading Json from stream - deserialized 50 customer records.
+0431: Reading Json from stream - deserialized 50 customer records.
+0432: Reading Json from stream - deserialized 50 customer records.
+0433: Reading Json from stream - deserialized 50 customer records.
+0434: Reading Json from stream - deserialized 50 customer records.
+0435: Reading Json from stream - deserialized 50 customer records.
+0436: Reading Json from stream - deserialized 50 customer records.
+0437: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[14].addresses[3].province | LineNumber: 0 | BytePositionInLine: 32994.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0438: Reading Json from stream - deserialized 50 customer records.
+0439: Reading Json from stream - deserialized 50 customer records.
+0440: Reading Json from stream - deserialized 50 customer records.
+0441: Reading Json from stream - deserialized 50 customer records.
+0442: Reading Json from stream - deserialized 50 customer records.
+0443: Reading Json from stream - deserialized 50 customer records.
+0444: Reading Json from stream - deserialized 50 customer records.
+0445: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[22].default_address.address2 | LineNumber: 0 | BytePositionInLine: 49313.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0446: Reading Json from stream - deserialized 50 customer records.
+0447: Reading Json from stream - deserialized 50 customer records.
+0448: Reading Json from stream - deserialized 50 customer records.
+0449: Reading Json from stream - deserialized 50 customer records.
+0450: Reading Json from stream - deserialized 50 customer records.
+0451: Reading Json from stream - deserialized 50 customer records.
+0452: Reading Json from stream - deserialized 50 customer records.
+0453: Reading Json from stream - deserialized 50 customer records.
+0454: Reading Json from stream - deserialized 50 customer records.
+0455: Reading Json from stream - deserialized 50 customer records.
+0456: Reading Json from stream - deserialized 50 customer records.
+0457: Reading Json from stream - deserialized 50 customer records.
+0458: Reading Json from stream - deserialized 50 customer records.
+0459: Reading Json from stream - deserialized 50 customer records.
+0460: Reading Json from stream - deserialized 50 customer records.
+0461: Reading Json from stream - deserialized 50 customer records.
+0462: Reading Json from stream - deserialized 50 customer records.
+0463: Reading Json from stream - deserialized 50 customer records.
+0464: Reading Json from stream - deserialized 50 customer records.
+0465: Reading Json from stream - deserialized 50 customer records.
+0466: Reading Json from stream - deserialized 50 customer records.
+0467: Reading Json from stream - deserialized 50 customer records.
+0468: Reading Json from stream - deserialized 50 customer records.
+0469: Reading Json from stream - deserialized 50 customer records.
+0470: Reading Json from stream - deserialized 50 customer records.
+0471: Reading Json from stream - deserialized 50 customer records.
+0472: Reading Json from stream - deserialized 50 customer records.
+0473: Reading Json from stream - deserialized 50 customer records.
+0474: Reading Json from stream - deserialized 50 customer records.
+0475: Reading Json from stream - deserialized 50 customer records.
+0476: Reading Json from stream - deserialized 50 customer records.
+0477: Reading Json from stream - deserialized 50 customer records.
+0478: Reading Json from stream - deserialized 50 customer records.
+0479: Reading Json from stream - deserialized 50 customer records.
+0480: Reading Json from stream - deserialized 50 customer records.
+0481: Reading Json from stream - deserialized 50 customer records.
+0482: Reading Json from stream - deserialized 50 customer records.
+0483: Reading Json from stream - deserialized 50 customer records.
+0484: Reading Json from stream - deserialized 50 customer records.
+0485: Reading Json from stream - deserialized 50 customer records.
+0486: Reading Json from stream - deserialized 50 customer records.
+0487: Reading Json from stream - deserialized 50 customer records.
+0488: Reading Json from stream - deserialized 50 customer records.
+0489: Reading Json from stream - deserialized 50 customer records.
+0490: Reading Json from stream - deserialized 50 customer records.
+0491: Reading Json from stream - deserialized 50 customer records.
+0492: Reading Json from stream - deserialized 50 customer records.
+0493: Reading Json from stream - deserialized 50 customer records.
+0494: Reading Json from stream - deserialized 50 customer records.
+0495: Reading Json from stream - deserialized 50 customer records.
+0496: Reading Json from stream - deserialized 50 customer records.
+0497: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[14].addresses[3].address2 | LineNumber: 0 | BytePositionInLine: 32900.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0498: Reading Json from stream - deserialized 50 customer records.
+0499: Reading Json from stream - deserialized 50 customer records.
+0500: Reading Json from stream - deserialized 50 customer records.
+0501: Reading Json from stream - deserialized 50 customer records.
+0502: Reading Json from stream - deserialized 50 customer records.
+0503: Reading Json from stream - deserialized 50 customer records.
+0504: Reading Json from stream - deserialized 50 customer records.
+0505: Reading Json from stream - deserialized 50 customer records.
+0506: Reading Json from stream - deserialized 50 customer records.
+0507: Reading Json from stream - deserialized 50 customer records.
+0508: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[22].default_address.address2 | LineNumber: 0 | BytePositionInLine: 49285.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0509: Reading Json from stream - deserialized 50 customer records.
+0510: Reading Json from stream - deserialized 50 customer records.
+0511: Reading Json from stream - deserialized 50 customer records.
+0512: Reading Json from stream - deserialized 50 customer records.
+0513: Reading Json from stream - deserialized 50 customer records.
+0514: Reading Json from stream - deserialized 50 customer records.
+0515: Reading Json from stream - deserialized 50 customer records.
+0516: Reading Json from stream - deserialized 50 customer records.
+0517: Reading Json from stream - deserialized 50 customer records.
+0518: Reading Json from stream - deserialized 50 customer records.
+0519: Reading Json from stream - deserialized 50 customer records.
+0520: Reading Json from stream - deserialized 50 customer records.
+0521: Reading Json from stream - deserialized 50 customer records.
+0522: Reading Json from stream - deserialized 50 customer records.
+0523: Reading Json from stream - deserialized 50 customer records.
+0524: Reading Json from stream - deserialized 50 customer records.
+0525: Reading Json from stream - deserialized 50 customer records.
+0526: Reading Json from stream - deserialized 50 customer records.
+0527: Reading Json from stream - deserialized 50 customer records.
+0528: Reading Json from stream - deserialized 50 customer records.
+0529: Reading Json from stream - deserialized 50 customer records.
+0530: Reading Json from stream - deserialized 50 customer records.
+0531: Reading Json from stream - deserialized 50 customer records.
+0532: Reading Json from stream - deserialized 50 customer records.
+0533: Reading Json from stream - deserialized 50 customer records.
+0534: Reading Json from stream - deserialized 50 customer records.
+0535: Reading Json from stream - deserialized 50 customer records.
+0536: Reading Json from stream - deserialized 50 customer records.
+0537: Reading Json from stream - deserialized 50 customer records.
+0538: Reading Json from stream - deserialized 50 customer records.
+0539: Reading Json from stream - deserialized 50 customer records.
+0540: Reading Json from stream - deserialized 50 customer records.
+0541: Reading Json from stream - deserialized 50 customer records.
+0542: Reading Json from stream - deserialized 50 customer records.
+0543: Reading Json from stream - deserialized 50 customer records.
+0544: Reading Json from stream - deserialized 50 customer records.
+0545: Reading Json from stream - deserialized 50 customer records.
+0546: Reading Json from stream - deserialized 50 customer records.
+0547: Reading Json from stream - deserialized 50 customer records.
+0548: Reading Json from stream - deserialized 50 customer records.
+0549: Reading Json from stream - deserialized 50 customer records.
+0550: Reading Json from stream - deserialized 50 customer records.
+0551: Reading Json from stream - deserialized 50 customer records.
+0552: Reading Json from stream - deserialized 50 customer records.
+0553: Reading Json from stream - deserialized 50 customer records.
+0554: Reading Json from stream - deserialized 50 customer records.
+0555: Reading Json from stream - deserialized 50 customer records.
+0556: Reading Json from stream - deserialized 50 customer records.
+0557: Error:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 55
+0558: Reading Json from stream - deserialized 50 customer records.
+0559: Reading Json from stream - deserialized 50 customer records.
+0560: Reading Json from stream - deserialized 50 customer records.
+0561: Reading Json from stream - deserialized 50 customer records.
+0562: Reading Json from stream - deserialized 50 customer records.
+0563: Reading Json from stream - deserialized 50 customer records.
+0564: Reading Json from stream - deserialized 50 customer records.
+0565: Reading Json from stream - deserialized 50 customer records.
+0566: Reading Json from stream - deserialized 50 customer records.
+0567: Reading Json from stream - deserialized 50 customer records.
+0568: Reading Json from stream - deserialized 50 customer records.
+0569: Reading Json from stream - deserialized 50 customer records.
+0570: Reading Json from stream - deserialized 50 customer records.
+0571: Reading Json from stream - deserialized 50 customer records.
+0572: Reading Json from stream - deserialized 50 customer records.
+0573: Reading Json from stream - deserialized 50 customer records.
+0574: Reading Json from stream - deserialized 50 customer records.
+0575: Reading Json from stream - deserialized 50 customer records.
+0576: Reading Json from stream - deserialized 50 customer records.
+0577: Reading Json from stream - deserialized 50 customer records.
+0578: Reading Json from stream - deserialized 50 customer records.
+0579: Reading Json from stream - deserialized 50 customer records.
+0580: Reading Json from stream - deserialized 50 customer records.
+0581: Error:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 55
+0582: Reading Json from stream - deserialized 50 customer records.
+0583: Reading Json from stream - deserialized 50 customer records.
+0584: Error:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 55
+0585: Reading Json from stream - deserialized 50 customer records.
+0586: Reading Json from stream - deserialized 50 customer records.
+0587: Reading Json from stream - deserialized 50 customer records.
+0588: Reading Json from stream - deserialized 50 customer records.
+0589: Reading Json from stream - deserialized 50 customer records.
+0590: Reading Json from stream - deserialized 50 customer records.
+0591: Reading Json from stream - deserialized 50 customer records.
+0592: Reading Json from stream - deserialized 50 customer records.
+0593: Reading Json from stream - deserialized 50 customer records.
+0594: Reading Json from stream - deserialized 50 customer records.
+0595: Reading Json from stream - deserialized 50 customer records.
+0596: Reading Json from stream - deserialized 50 customer records.
+0597: Reading Json from stream - deserialized 50 customer records.
+0598: Reading Json from stream - deserialized 50 customer records.
+0599: Reading Json from stream - deserialized 50 customer records.
+0600: Reading Json from stream - deserialized 50 customer records.
+0601: Reading Json from stream - deserialized 50 customer records.
+0602: Reading Json from stream - deserialized 50 customer records.
+0603: Reading Json from stream - deserialized 50 customer records.
+0604: Reading Json from stream - deserialized 50 customer records.
+0605: Reading Json from stream - deserialized 50 customer records.
+0606: Reading Json from stream - deserialized 50 customer records.
+0607: Reading Json from stream - deserialized 50 customer records.
+0608: Reading Json from stream - deserialized 50 customer records.
+0609: Reading Json from stream - deserialized 50 customer records.
+0610: Reading Json from stream - deserialized 50 customer records.
+0611: Reading Json from stream - deserialized 50 customer records.
+0612: Reading Json from stream - deserialized 50 customer records.
+0613: Reading Json from stream - deserialized 50 customer records.
+0614: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[37].default_address.province | LineNumber: 0 | BytePositionInLine: 82085.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0615: Reading Json from stream - deserialized 50 customer records.
+0616: Reading Json from stream - deserialized 50 customer records.
+0617: Reading Json from stream - deserialized 50 customer records.
+0618: Reading Json from stream - deserialized 50 customer records.
+0619: Reading Json from stream - deserialized 50 customer records.
+0620: Reading Json from stream - deserialized 50 customer records.
+0621: Reading Json from stream - deserialized 50 customer records.
+0622: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[29].addresses[3].address2 | LineNumber: 0 | BytePositionInLine: 65633.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0623: Reading Json from stream - deserialized 50 customer records.
+0624: Reading Json from stream - deserialized 50 customer records.
+0625: Reading Json from stream - deserialized 50 customer records.
+0626: Reading Json from stream - deserialized 50 customer records.
+0627: Reading Json from stream - deserialized 50 customer records.
+0628: Reading Json from stream - deserialized 50 customer records.
+0629: Reading Json from stream - deserialized 50 customer records.
+0630: Reading Json from stream - deserialized 50 customer records.
+0631: Reading Json from stream - deserialized 50 customer records.
+0632: Reading Json from stream - deserialized 50 customer records.
+0633: Reading Json from stream - deserialized 50 customer records.
+0634: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[29].addresses[3].address2 | LineNumber: 0 | BytePositionInLine: 65659.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0635: Reading Json from stream - deserialized 50 customer records.
+0636: Reading Json from stream - deserialized 50 customer records.
+0637: Reading Json from stream - deserialized 50 customer records.
+0638: Reading Json from stream - deserialized 50 customer records.
+0639: Reading Json from stream - deserialized 50 customer records.
+0640: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[37].default_address.province | LineNumber: 0 | BytePositionInLine: 82133.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0641: Reading Json from stream - deserialized 50 customer records.
+0642: Reading Json from stream - deserialized 50 customer records.
+0643: Reading Json from stream - deserialized 50 customer records.
+0644: Reading Json from stream - deserialized 50 customer records.
+0645: Reading Json from stream - deserialized 50 customer records.
+0646: Reading Json from stream - deserialized 50 customer records.
+0647: Reading Json from stream - deserialized 50 customer records.
+0648: Reading Json from stream - deserialized 50 customer records.
+0649: Reading Json from stream - deserialized 50 customer records.
+0650: Reading Json from stream - deserialized 50 customer records.
+0651: Reading Json from stream - deserialized 50 customer records.
+0652: Error:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 55
+0653: Reading Json from stream - deserialized 50 customer records.
+0654: Reading Json from stream - deserialized 50 customer records.
+0655: Reading Json from stream - deserialized 50 customer records.
+0656: Reading Json from stream - deserialized 50 customer records.
+0657: Reading Json from stream - deserialized 50 customer records.
+0658: Reading Json from stream - deserialized 50 customer records.
+0659: Reading Json from stream - deserialized 50 customer records.
+0660: Reading Json from stream - deserialized 50 customer records.
+0661: Reading Json from stream - deserialized 50 customer records.
+0662: Reading Json from stream - deserialized 50 customer records.
+0663: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[22].default_address.address2 | LineNumber: 0 | BytePositionInLine: 49288.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0664: Reading Json from stream - deserialized 50 customer records.
+0665: Reading Json from stream - deserialized 50 customer records.
+0666: Reading Json from stream - deserialized 50 customer records.
+0667: Reading Json from stream - deserialized 50 customer records.
+0668: Reading Json from stream - deserialized 50 customer records.
+0669: Reading Json from stream - deserialized 50 customer records.
+0670: Reading Json from stream - deserialized 50 customer records.
+0671: Reading Json from stream - deserialized 50 customer records.
+0672: Reading Json from stream - deserialized 50 customer records.
+0673: Reading Json from stream - deserialized 50 customer records.
+0674: Reading Json from stream - deserialized 50 customer records.
+0675: Reading Json from stream - deserialized 50 customer records.
+0676: Reading Json from stream - deserialized 50 customer records.
+0677: Reading Json from stream - deserialized 50 customer records.
+0678: Reading Json from stream - deserialized 50 customer records.
+0679: Reading Json from stream - deserialized 50 customer records.
+0680: Reading Json from stream - deserialized 50 customer records.
+0681: Reading Json from stream - deserialized 50 customer records.
+0682: Reading Json from stream - deserialized 50 customer records.
+0683: Reading Json from stream - deserialized 50 customer records.
+0684: Reading Json from stream - deserialized 50 customer records.
+0685: Reading Json from stream - deserialized 50 customer records.
+0686: Reading Json from stream - deserialized 50 customer records.
+0687: Reading Json from stream - deserialized 50 customer records.
+0688: Reading Json from stream - deserialized 50 customer records.
+0689: Reading Json from stream - deserialized 50 customer records.
+0690: Reading Json from stream - deserialized 50 customer records.
+0691: Reading Json from stream - deserialized 50 customer records.
+0692: Reading Json from stream - deserialized 50 customer records.
+0693: Reading Json from stream - deserialized 50 customer records.
+0694: Reading Json from stream - deserialized 50 customer records.
+0695: Reading Json from stream - deserialized 50 customer records.
+0696: Reading Json from stream - deserialized 50 customer records.
+0697: Reading Json from stream - deserialized 50 customer records.
+0698: Reading Json from stream - deserialized 50 customer records.
+0699: Reading Json from stream - deserialized 50 customer records.
+0700: Reading Json from stream - deserialized 50 customer records.
+0701: Reading Json from stream - deserialized 50 customer records.
+0702: Reading Json from stream - deserialized 50 customer records.
+0703: Reading Json from stream - deserialized 50 customer records.
+0704: Reading Json from stream - deserialized 50 customer records.
+0705: Reading Json from stream - deserialized 50 customer records.
+0706: Reading Json from stream - deserialized 50 customer records.
+0707: Reading Json from stream - deserialized 50 customer records.
+0708: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[22].default_address.address2 | LineNumber: 0 | BytePositionInLine: 49314.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0709: Reading Json from stream - deserialized 50 customer records.
+0710: Reading Json from stream - deserialized 50 customer records.
+0711: Reading Json from stream - deserialized 50 customer records.
+0712: Reading Json from stream - deserialized 50 customer records.
+0713: Reading Json from stream - deserialized 50 customer records.
+0714: Reading Json from stream - deserialized 50 customer records.
+0715: Reading Json from stream - deserialized 50 customer records.
+0716: Reading Json from stream - deserialized 50 customer records.
+0717: Reading Json from stream - deserialized 50 customer records.
+0718: Reading Json from stream - deserialized 50 customer records.
+0719: Reading Json from stream - deserialized 50 customer records.
+0720: Reading Json from stream - deserialized 50 customer records.
+0721: Reading Json from stream - deserialized 50 customer records.
+0722: Reading Json from stream - deserialized 50 customer records.
+0723: Reading Json from stream - deserialized 50 customer records.
+0724: Reading Json from stream - deserialized 50 customer records.
+0725: Reading Json from stream - deserialized 50 customer records.
+0726: Reading Json from stream - deserialized 50 customer records.
+0727: Reading Json from stream - deserialized 50 customer records.
+0728: Reading Json from stream - deserialized 50 customer records.
+0729: Reading Json from stream - deserialized 50 customer records.
+0730: Reading Json from stream - deserialized 50 customer records.
+0731: Reading Json from stream - deserialized 50 customer records.
+0732: Reading Json from stream - deserialized 50 customer records.
+0733: Reading Json from stream - deserialized 50 customer records.
+0734: Reading Json from stream - deserialized 50 customer records.
+0735: Reading Json from stream - deserialized 50 customer records.
+0736: Reading Json from stream - deserialized 50 customer records.
+0737: Reading Json from stream - deserialized 50 customer records.
+0738: Reading Json from stream - deserialized 50 customer records.
+0739: Reading Json from stream - deserialized 50 customer records.
+0740: Reading Json from stream - deserialized 50 customer records.
+0741: Reading Json from stream - deserialized 50 customer records.
+0742: Reading Json from stream - deserialized 50 customer records.
+0743: Reading Json from stream - deserialized 50 customer records.
+0744: Reading Json from stream - deserialized 50 customer records.
+0745: Reading Json from stream - deserialized 50 customer records.
+0746: Reading Json from stream - deserialized 50 customer records.
+0747: Reading Json from stream - deserialized 50 customer records.
+0748: Reading Json from stream - deserialized 50 customer records.
+0749: Reading Json from stream - deserialized 50 customer records.
+0750: Reading Json from stream - deserialized 50 customer records.
+0751: Reading Json from stream - deserialized 50 customer records.
+0752: Reading Json from stream - deserialized 50 customer records.
+0753: Reading Json from stream - deserialized 50 customer records.
+0754: Reading Json from stream - deserialized 50 customer records.
+0755: Reading Json from stream - deserialized 50 customer records.
+0756: Reading Json from stream - deserialized 50 customer records.
+0757: Reading Json from stream - deserialized 50 customer records.
+0758: Reading Json from stream - deserialized 50 customer records.
+0759: Reading Json from stream - deserialized 50 customer records.
+0760: Reading Json from stream - deserialized 50 customer records.
+0761: Reading Json from stream - deserialized 50 customer records.
+0762: Reading Json from stream - deserialized 50 customer records.
+0763: Reading Json from stream - deserialized 50 customer records.
+0764: Reading Json from stream - deserialized 50 customer records.
+0765: Reading Json from stream - deserialized 50 customer records.
+0766: Reading Json from stream - deserialized 50 customer records.
+0767: Reading Json from stream - deserialized 50 customer records.
+0768: Reading Json from stream - deserialized 50 customer records.
+0769: Reading Json from stream - deserialized 50 customer records.
+0770: Reading Json from stream - deserialized 50 customer records.
+0771: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[29].addresses[3].address2 | LineNumber: 0 | BytePositionInLine: 65659.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0772: Reading Json from stream - deserialized 50 customer records.
+0773: Reading Json from stream - deserialized 50 customer records.
+0774: Reading Json from stream - deserialized 50 customer records.
+0775: Reading Json from stream - deserialized 50 customer records.
+0776: Reading Json from stream - deserialized 50 customer records.
+0777: Reading Json from stream - deserialized 50 customer records.
+0778: Reading Json from stream - deserialized 50 customer records.
+0779: Reading Json from stream - deserialized 50 customer records.
+0780: Reading Json from stream - deserialized 50 customer records.
+0781: Reading Json from stream - deserialized 50 customer records.
+0782: Reading Json from stream - deserialized 50 customer records.
+0783: Reading Json from stream - deserialized 50 customer records.
+0784: Reading Json from stream - deserialized 50 customer records.
+0785: Reading Json from stream - deserialized 50 customer records.
+0786: Reading Json from stream - deserialized 50 customer records.
+0787: Reading Json from stream - deserialized 50 customer records.
+0788: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[14].addresses[3].address2 | LineNumber: 0 | BytePositionInLine: 32913.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0789: Reading Json from stream - deserialized 50 customer records.
+0790: Reading Json from stream - deserialized 50 customer records.
+0791: Reading Json from stream - deserialized 50 customer records.
+0792: Reading Json from stream - deserialized 50 customer records.
+0793: Reading Json from stream - deserialized 50 customer records.
+0794: Reading Json from stream - deserialized 50 customer records.
+0795: Reading Json from stream - deserialized 50 customer records.
+0796: Reading Json from stream - deserialized 50 customer records.
+0797: Reading Json from stream - deserialized 50 customer records.
+0798: Reading Json from stream - deserialized 50 customer records.
+0799: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[22].default_address.address2 | LineNumber: 0 | BytePositionInLine: 49295.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0800: Reading Json from stream - deserialized 50 customer records.
+0801: Reading Json from stream - deserialized 50 customer records.
+0802: Reading Json from stream - deserialized 50 customer records.
+0803: Reading Json from stream - deserialized 50 customer records.
+0804: Reading Json from stream - deserialized 50 customer records.
+0805: Reading Json from stream - deserialized 50 customer records.
+0806: Reading Json from stream - deserialized 50 customer records.
+0807: Reading Json from stream - deserialized 50 customer records.
+0808: Reading Json from stream - deserialized 50 customer records.
+0809: Reading Json from stream - deserialized 50 customer records.
+0810: Reading Json from stream - deserialized 50 customer records.
+0811: Reading Json from stream - deserialized 50 customer records.
+0812: Reading Json from stream - deserialized 50 customer records.
+0813: Reading Json from stream - deserialized 50 customer records.
+0814: Reading Json from stream - deserialized 50 customer records.
+0815: Reading Json from stream - deserialized 50 customer records.
+0816: Reading Json from stream - deserialized 50 customer records.
+0817: Reading Json from stream - deserialized 50 customer records.
+0818: Reading Json from stream - deserialized 50 customer records.
+0819: Reading Json from stream - deserialized 50 customer records.
+0820: Reading Json from stream - deserialized 50 customer records.
+0821: Reading Json from stream - deserialized 50 customer records.
+0822: Reading Json from stream - deserialized 50 customer records.
+0823: Reading Json from stream - deserialized 50 customer records.
+0824: Reading Json from stream - deserialized 50 customer records.
+0825: Reading Json from stream - deserialized 50 customer records.
+0826: Reading Json from stream - deserialized 50 customer records.
+0827: Reading Json from stream - deserialized 50 customer records.
+0828: Reading Json from stream - deserialized 50 customer records.
+0829: Reading Json from stream - deserialized 50 customer records.
+0830: Reading Json from stream - deserialized 50 customer records.
+0831: Reading Json from stream - deserialized 50 customer records.
+0832: Reading Json from stream - deserialized 50 customer records.
+0833: Reading Json from stream - deserialized 50 customer records.
+0834: Reading Json from stream - deserialized 50 customer records.
+0835: Reading Json from stream - deserialized 50 customer records.
+0836: Reading Json from stream - deserialized 50 customer records.
+0837: Reading Json from stream - deserialized 50 customer records.
+0838: Reading Json from stream - deserialized 50 customer records.
+0839: Reading Json from stream - deserialized 50 customer records.
+0840: Reading Json from stream - deserialized 50 customer records.
+0841: Reading Json from stream - deserialized 50 customer records.
+0842: Reading Json from stream - deserialized 50 customer records.
+0843: Reading Json from stream - deserialized 50 customer records.
+0844: Reading Json from stream - deserialized 50 customer records.
+0845: Reading Json from stream - deserialized 50 customer records.
+0846: Reading Json from stream - deserialized 50 customer records.
+0847: Reading Json from stream - deserialized 50 customer records.
+0848: Reading Json from stream - deserialized 50 customer records.
+0849: Reading Json from stream - deserialized 50 customer records.
+0850: Reading Json from stream - deserialized 50 customer records.
+0851: Reading Json from stream - deserialized 50 customer records.
+0852: Reading Json from stream - deserialized 50 customer records.
+0853: Reading Json from stream - deserialized 50 customer records.
+0854: Reading Json from stream - deserialized 50 customer records.
+0855: Reading Json from stream - deserialized 50 customer records.
+0856: Reading Json from stream - deserialized 50 customer records.
+0857: Reading Json from stream - deserialized 50 customer records.
+0858: Reading Json from stream - deserialized 50 customer records.
+0859: Reading Json from stream - deserialized 50 customer records.
+0860: Reading Json from stream - deserialized 50 customer records.
+0861: Reading Json from stream - deserialized 50 customer records.
+0862: Reading Json from stream - deserialized 50 customer records.
+0863: Reading Json from stream - deserialized 50 customer records.
+0864: Reading Json from stream - deserialized 50 customer records.
+0865: Reading Json from stream - deserialized 50 customer records.
+0866: Reading Json from stream - deserialized 50 customer records.
+0867: Reading Json from stream - deserialized 50 customer records.
+0868: Reading Json from stream - deserialized 50 customer records.
+0869: Reading Json from stream - deserialized 50 customer records.
+0870: Reading Json from stream - deserialized 50 customer records.
+0871: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[14].addresses[3].address2 | LineNumber: 0 | BytePositionInLine: 32902.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0872: Reading Json from stream - deserialized 50 customer records.
+0873: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[37].default_address.province | LineNumber: 0 | BytePositionInLine: 82130.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0874: Reading Json from stream - deserialized 50 customer records.
+0875: Reading Json from stream - deserialized 50 customer records.
+0876: Reading Json from stream - deserialized 50 customer records.
+0877: Reading Json from stream - deserialized 50 customer records.
+0878: Reading Json from stream - deserialized 50 customer records.
+0879: Reading Json from stream - deserialized 50 customer records.
+0880: Reading Json from stream - deserialized 50 customer records.
+0881: Reading Json from stream - deserialized 50 customer records.
+0882: Reading Json from stream - deserialized 50 customer records.
+0883: Reading Json from stream - deserialized 50 customer records.
+0884: Reading Json from stream - deserialized 50 customer records.
+0885: Reading Json from stream - deserialized 50 customer records.
+0886: Reading Json from stream - deserialized 50 customer records.
+0887: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[29].addresses[3].province | LineNumber: 0 | BytePositionInLine: 65725.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0888: Reading Json from stream - deserialized 50 customer records.
+0889: Reading Json from stream - deserialized 50 customer records.
+0890: Reading Json from stream - deserialized 50 customer records.
+0891: Reading Json from stream - deserialized 50 customer records.
+0892: Reading Json from stream - deserialized 50 customer records.
+0893: Reading Json from stream - deserialized 50 customer records.
+0894: Reading Json from stream - deserialized 50 customer records.
+0895: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[29].addresses[3].province | LineNumber: 0 | BytePositionInLine: 65727.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0896: Reading Json from stream - deserialized 50 customer records.
+0897: Reading Json from stream - deserialized 50 customer records.
+0898: Reading Json from stream - deserialized 50 customer records.
+0899: Reading Json from stream - deserialized 50 customer records.
+0900: Reading Json from stream - deserialized 50 customer records.
+0901: Reading Json from stream - deserialized 50 customer records.
+0902: Reading Json from stream - deserialized 50 customer records.
+0903: Reading Json from stream - deserialized 50 customer records.
+0904: Reading Json from stream - deserialized 50 customer records.
+0905: Reading Json from stream - deserialized 50 customer records.
+0906: Reading Json from stream - deserialized 50 customer records.
+0907: Reading Json from stream - deserialized 50 customer records.
+0908: Reading Json from stream - deserialized 50 customer records.
+0909: Reading Json from stream - deserialized 50 customer records.
+0910: Reading Json from stream - deserialized 50 customer records.
+0911: Reading Json from stream - deserialized 50 customer records.
+0912: Reading Json from stream - deserialized 50 customer records.
+0913: Reading Json from stream - deserialized 50 customer records.
+0914: Reading Json from stream - deserialized 50 customer records.
+0915: Reading Json from stream - deserialized 50 customer records.
+0916: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[29].addresses[3].province | LineNumber: 0 | BytePositionInLine: 65738.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'EndObject' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0917: Reading Json from stream - deserialized 50 customer records.
+0918: Reading Json from stream - deserialized 50 customer records.
+0919: Reading Json from stream - deserialized 50 customer records.
+0920: Reading Json from stream - deserialized 50 customer records.
+0921: Reading Json from stream - deserialized 50 customer records.
+0922: Reading Json from stream - deserialized 50 customer records.
+0923: Reading Json from stream - deserialized 50 customer records.
+0924: Reading Json from stream - deserialized 50 customer records.
+0925: Reading Json from stream - deserialized 50 customer records.
+0926: Reading Json from stream - deserialized 50 customer records.
+0927: Reading Json from stream - deserialized 50 customer records.
+0928: Reading Json from stream - deserialized 50 customer records.
+0929: Reading Json from stream - deserialized 50 customer records.
+0930: Reading Json from stream - deserialized 50 customer records.
+0931: Reading Json from stream - deserialized 50 customer records.
+0932: Reading Json from stream - deserialized 50 customer records.
+0933: Reading Json from stream - deserialized 50 customer records.
+0934: Reading Json from stream - deserialized 50 customer records.
+0935: Reading Json from stream - deserialized 50 customer records.
+0936: Reading Json from stream - deserialized 50 customer records.
+0937: Reading Json from stream - deserialized 50 customer records.
+0938: Reading Json from stream - deserialized 50 customer records.
+0939: Reading Json from stream - deserialized 50 customer records.
+0940: Error:
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.customers[37].default_address.address2 | LineNumber: 0 | BytePositionInLine: 82045.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadCore[TValue](JsonReaderState& readerState, Boolean isFinalBlock, ReadOnlySpan`1 buffer, JsonSerializerOptions options, ReadStack& state, JsonConverter converterBase)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Program.Main(String[] args) in C:\dev\frankbuckley\net5-json-repro\Program.cs:line 53
+0941: Reading Json from stream - deserialized 50 customer records.
+0942: Reading Json from stream - deserialized 50 customer records.
+0943: Reading Json from stream - deserialized 50 customer records.
+0944: Reading Json from stream - deserialized 50 customer records.
+0945: Reading Json from stream - deserialized 50 customer records.
+0946: Reading Json from stream - deserialized 50 customer records.
+0947: Reading Json from stream - deserialized 50 customer records.
+0948: Reading Json from stream - deserialized 50 customer records.
+0949: Reading Json from stream - deserialized 50 customer records.
+0950: Reading Json from stream - deserialized 50 customer records.
+0951: Reading Json from stream - deserialized 50 customer records.
+0952: Reading Json from stream - deserialized 50 customer records.
+0953: Reading Json from stream - deserialized 50 customer records.
+0954: Reading Json from stream - deserialized 50 customer records.
+0955: Reading Json from stream - deserialized 50 customer records.
+0956: Reading Json from stream - deserialized 50 customer records.
+0957: Reading Json from stream - deserialized 50 customer records.
+0958: Reading Json from stream - deserialized 50 customer records.
+0959: Reading Json from stream - deserialized 50 customer records.
+0960: Reading Json from stream - deserialized 50 customer records.
+0961: Reading Json from stream - deserialized 50 customer records.
+0962: Reading Json from stream - deserialized 50 customer records.
+0963: Reading Json from stream - deserialized 50 customer records.
+0964: Reading Json from stream - deserialized 50 customer records.
+0965: Reading Json from stream - deserialized 50 customer records.
+0966: Reading Json from stream - deserialized 50 customer records.
+0967: Reading Json from stream - deserialized 50 customer records.
+0968: Reading Json from stream - deserialized 50 customer records.
+0969: Reading Json from stream - deserialized 50 customer records.
+0970: Reading Json from stream - deserialized 50 customer records.
+0971: Reading Json from stream - deserialized 50 customer records.
+0972: Reading Json from stream - deserialized 50 customer records.
+0973: Reading Json from stream - deserialized 50 customer records.
+0974: Reading Json from stream - deserialized 50 customer records.
+0975: Reading Json from stream - deserialized 50 customer records.
+0976: Reading Json from stream - deserialized 50 customer records.
+0977: Reading Json from stream - deserialized 50 customer records.
+0978: Reading Json from stream - deserialized 50 customer records.
+0979: Reading Json from stream - deserialized 50 customer records.
+0980: Reading Json from stream - deserialized 50 customer records.
+0981: Reading Json from stream - deserialized 50 customer records.
+0982: Reading Json from stream - deserialized 50 customer records.
+0983: Reading Json from stream - deserialized 50 customer records.
+0984: Reading Json from stream - deserialized 50 customer records.
+0985: Reading Json from stream - deserialized 50 customer records.
+0986: Reading Json from stream - deserialized 50 customer records.
+0987: Reading Json from stream - deserialized 50 customer records.
+0988: Reading Json from stream - deserialized 50 customer records.
+0989: Reading Json from stream - deserialized 50 customer records.
+0990: Reading Json from stream - deserialized 50 customer records.
+0991: Reading Json from stream - deserialized 50 customer records.
+0992: Reading Json from stream - deserialized 50 customer records.
+0993: Reading Json from stream - deserialized 50 customer records.
+0994: Reading Json from stream - deserialized 50 customer records.
+0995: Reading Json from stream - deserialized 50 customer records.
+0996: Reading Json from stream - deserialized 50 customer records.
+0997: Reading Json from stream - deserialized 50 customer records.
+0998: Reading Json from stream - deserialized 50 customer records.
+0999: Reading Json from stream - deserialized 50 customer records.

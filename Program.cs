@@ -24,38 +24,46 @@ class Program
         });
 
         string runId = DateTime.UtcNow.ToString("yyyy-MM-dd-HHmmss");
-        string outputDir = Path.Combine(Path.GetTempPath(), "json_error_data");
+        string outputDir = Path.Combine(AppContext.BaseDirectory, "../../../examples", runId);
+        string outputFile = Path.Combine(outputDir, runId + ".txt");
 
-        for (int i = 0; i < 1000; i++)
+        if (!Directory.Exists(outputDir))
         {
-            var stream = new MemoryStream();
+            Directory.CreateDirectory(outputDir);
+        }
 
-            try
+        using (var output = File.OpenWrite(outputFile))
+        using (var writer = new StreamWriter(output))
+        {
+            for (int i = 0; i < 1000; i++)
             {
-                var customers = new CustomerCollectionResponse
+                var stream = new MemoryStream();
+
+                try
                 {
-                    Customers = Enumerable.Range(0, 250).Select(i => CustomerDataGenerator.CreateCustomer()).ToList()
-                };
+                    var customers = new CustomerCollectionResponse
+                    {
+                        Customers = Enumerable.Range(0, 50).Select(i => CustomerDataGenerator.CreateCustomer()).ToList()
+                    };
 
-                await JsonSerializer.SerializeAsync(stream, customers);
+                    await JsonSerializer.SerializeAsync(stream, customers);
 
-                stream.Position = 0;
+                    stream.Position = 0;
 
-                var deserialized = await JsonSerializer.DeserializeAsync<CustomerCollectionResponse>(stream, s_serializerOptions);
+                    var deserialized = await JsonSerializer.DeserializeAsync<CustomerCollectionResponse>(stream, s_serializerOptions);
 
-                Console.WriteLine($"{i:0000}: Reading Json from stream - deserialized {deserialized.Customers.Count} customer records.");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"{i:0000}: Error:{Environment.NewLine}{e}");
-
-                if (!Directory.Exists(outputDir))
-                {
-                    Directory.CreateDirectory(outputDir);
+                    writer.WriteLine($"{i:0000}: Reading Json from stream - deserialized {deserialized.Customers.Count} customer records.");
+                    Console.WriteLine($"{i:0000}: Reading Json from stream - deserialized {deserialized.Customers.Count} customer records.");
                 }
-                using (var file = File.OpenWrite(Path.Combine(outputDir, $"{runId}-{i:0000}.json")))
+                catch (Exception e)
                 {
-                    await file.WriteAsync(stream.ToArray());                    
+                    writer.WriteLine($"{i:0000}: Error:{Environment.NewLine}{e}");
+                    Console.WriteLine($"{i:0000}: Error:{Environment.NewLine}{e}");
+
+                    using (var file = File.OpenWrite(Path.Combine(outputDir, $"{runId}-{i:0000}.json")))
+                    {
+                        await file.WriteAsync(stream.ToArray());
+                    }
                 }
             }
         }
@@ -66,8 +74,15 @@ public static class CustomerDataGenerator
 {
     public static Customer CreateCustomer()
     {
-        var addressFaker = new AutoFaker<Address>().RuleFor(a => a.Province, f => f.Address.State().OrNull(f, 0.7f));
-        var customerFaker = new AutoFaker<Customer>();
+        var addressFaker = new AutoFaker<Address>()
+            .RuleFor(a => a.Address1, f => f.Address.StreetName())
+            .RuleFor(a => a.Address2, f => f.Address.StreetName().OrNull(f, 0.9f))
+            .RuleFor(a => a.City, f => f.Address.City())
+            .RuleFor(a => a.Country, f => f.Address.Country())
+            .RuleFor(a => a.CountryCode, f => f.Address.CountryCode())
+            .RuleFor(a => a.Province, f => f.Address.State().OrNull(f, 0.7f));
+        var customerFaker = new AutoFaker<Customer>()
+            .RuleFor(c => c.Email, f => f.Person.Email);
 
         var customer = customerFaker.Generate();
         customer.DefaultAddress = addressFaker.Generate();
